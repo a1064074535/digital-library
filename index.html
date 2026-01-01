@@ -19,7 +19,7 @@
                 }
 
                 .container {
-                              max-width: 1000px;
+                              max-width: 1200px;
                               margin: 0 auto;
                               background: white;
                               border-radius: 15px;
@@ -48,8 +48,61 @@
                               padding: 40px 20px;
                 }
 
+                .section-title {
+                              font-size: 28px;
+                              color: #333;
+                              margin-bottom: 30px;
+                              text-align: center;
+                              padding-bottom: 20px;
+                              border-bottom: 3px solid #667eea;
+                }
+
+                .services-grid {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                              gap: 20px;
+                              margin-bottom: 40px;
+                }
+
+                .service-card {
+                              background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+                              padding: 20px;
+                              border-radius: 12px;
+                              border-right: 5px solid #667eea;
+                              transition: all 0.3s ease;
+                              box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                }
+
+                .service-card:hover {
+                              transform: translateY(-5px);
+                              box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                }
+
+                .service-card.special {
+                              border-right-color: #ff6b6b;
+                              background: linear-gradient(135deg, #ffe5e5 0%, #fff0f0 100%);
+                }
+
+                .service-name {
+                              font-size: 18px;
+                              font-weight: bold;
+                              color: #333;
+                              margin-bottom: 12px;
+                }
+
+                .service-price {
+                              font-size: 28px;
+                              color: #667eea;
+                              font-weight: bold;
+                              margin-bottom: 10px;
+                }
+
+                .service-card.special .service-price {
+                              color: #ff6b6b;
+                }
+
                 .payment-section {
-                              margin-top: 30px;
+                              margin-top: 40px;
                               padding: 25px;
                               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                               border-radius: 15px;
@@ -64,7 +117,7 @@
                               font-weight: bold;
                 }
 
-                .service-price {
+                .service-price-box {
                               background: rgba(255,255,255,0.95);
                               padding: 20px;
                               border-radius: 10px;
@@ -72,7 +125,7 @@
                               text-align: center;
                 }
 
-                .service-price h4 {
+                .service-price-box h4 {
                               color: #333;
                               margin-bottom: 10px;
                               font-size: 18px;
@@ -216,6 +269,10 @@
                               .payment-section {
                                                 padding: 15px;
                               }
+
+                              .services-grid {
+                                                grid-template-columns: 1fr;
+                              }
                 }
             </style>
   </head>
@@ -227,10 +284,104 @@
                   </div>div>
                 
                 <div class="content">
+                            <h2 class="section-title">قائمة أسعار الخدمات</h2>
+                            
+                            <div class="services-grid">
+                                            <div class="service-card">
+                                                                <div class="service-name">الترجمة القانونية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">ترجمة احترافية للوثائق القانونية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">التصديقات</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">تصديق الوثائق الرسمية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">الاستشارات القانونية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">استشارات قانونية متخصصة</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">إصدار الرخص التجارية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">الحصول على الرخصة التجارية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">تأسيس الشركات</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">تأسيس وتسجيل الشركات</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">تسجيل العلامات التجارية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">حماية العلامة التجارية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">إعداد العقود</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">صياغة العقود القانونية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">القضايا العمالية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">تمثيل في القضايا العمالية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">خدمات الأحوال المدنية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">الخدمات الأحوال المدنية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">خدمات الجوازات</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">خدمات الجوازات والتأشيرات</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">التأمينات الاجتماعية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">خدمات التأمينات الاجتماعية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">الاستعلامات الحكومية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">الاستعلام عن الخدمات</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">حجز المواعيد الحكومية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">حجز المواعيد بسهولة</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card">
+                                                                <div class="service-name">الإجراءات الحكومية</div>div>
+                                                                <div class="service-price">20 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">المساعدة في الإجراءات الحكومية</p>
+                                            </div>div>
+                                            
+                                            <div class="service-card special">
+                                                                <div class="service-name">الضمان الاجتماعي المطور</div>div>
+                                                                <div class="service-price">59 ريال</div>div>
+                                                                <p style="color: #666; font-size: 13px;">التسجيل والمتابعة في برنامج الضمان</p>
+                                            </div>div>
+                            </div>div>
+                            
                             <div class="payment-section">
                                             <h3>معلومات الدفع والتحويل</h3>
                                             
-                                            <div class="service-price">
+                                            <div class="service-price-box">
                                                                 <h4>سعر الخدمة</h4>
                                                                 <p class="price-amount"><span id="service-price">20</span>span> ريال</p>
                                                                 <p class="price-note">شامل جميع الرسوم</p>
