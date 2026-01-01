@@ -1,0 +1,204 @@
+# تحديث الصفحة الرئيسية مع الأسعار
+
+## التعديلات المطلوبة:
+
+### 1. إضافة CSS للأسعار (بعد السطر 26 في ملف HTML الأصلي):
+
+```css
+.service-card {
+    position: relative; /* إضافة هذا */
+    transition: all 0.3s ease;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-price-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.service-price-badge.premium {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    font-size: 16px;
+    padding: 10px 20px;
+}
+```
+
+### 2. تعديل بطاقات الخدمات:
+
+#### الضمان الاجتماعي المطور (59 ريال):
+```html
+<a href="/damman-form" class="service-card">
+    <div class="service-price-badge premium">59 ريال</div>
+    <div class="text-6xl mb-4 text-center">🏛️</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">الضمان الاجتماعي المطور</h3>
+    <p class="text-gray-600 text-center">مساعدتك في التقديم والمتابعة للحصول على الدعم المستحق</p>
+</a>
+```
+
+#### حساب المواطن (20 ريال):
+```html
+<a href="/citizen-account-form" class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">💼</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">حساب المواطن</h3>
+    <p class="text-gray-600 text-center">التسجيل في برنامج حساب المواطن بكل سهولة</p>
+</a>
+```
+
+#### حافز (20 ريال):
+```html
+<a href="/hafiz-form" class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">💰</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">حافز</h3>
+    <p class="text-gray-600 text-center">التسجيل في برنامج حافز للباحثين عن عمل</p>
+</a>
+```
+
+#### ساند (20 ريال):
+```html
+<a href="/sanad-form" class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">🤝</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">ساند</h3>
+    <p class="text-gray-600 text-center">برنامج دعم العاطلين عن العمل</p>
+</a>
+```
+
+#### قياس - جدارات (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">📊</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">قياس - جدارات</h3>
+    <p class="text-gray-600 text-center">الاستعداد والتسجيل لاختبارات القدرات والكفايات</p>
+</div>
+```
+
+#### تمهير (20 ريال):
+```html
+<a href="/tamheer-form" class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">🎓</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">تمهير</h3>
+    <p class="text-gray-600 text-center">برنامج التدريب على رأس العمل لحديثي التخرج</p>
+</a>
+```
+
+#### توطين (20 ريال):
+```html
+<a href="/towteen-form" class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">👔</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">توطين</h3>
+    <p class="text-gray-600 text-center">دعم توطين الوظائف والحصول على المزايا</p>
+</a>
+```
+
+#### إنشاء متجر إلكتروني (100 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge premium">100 ريال</div>
+    <div class="text-6xl mb-4 text-center">🛒</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">إنشاء متجر إلكتروني</h3>
+    <p class="text-gray-600 text-center">متجرك الخاص بتصميم احترافي وإدارة متكاملة</p>
+</div>
+```
+
+#### دورات التجارة الإلكترونية (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">💻</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">دورات التجارة الإلكترونية</h3>
+    <p class="text-gray-600 text-center">تعلم أسرار النجاح في عالم التجارة الرقمية</p>
+</div>
+```
+
+#### التدريس من المنزل (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">📚</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">التدريس من المنزل</h3>
+    <p class="text-gray-600 text-center">منصات وأدوات لبدء مشروع التدريس الخاص</p>
+</div>
+```
+
+#### التسويق الرقمي (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">📈</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">التسويق الرقمي</h3>
+    <p class="text-gray-600 text-center">استراتيجيات تسويقية متكاملة لنجاح أعمالك</p>
+</div>
+```
+
+#### زيادة المتابعين (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">👥</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">زيادة المتابعين</h3>
+    <p class="text-gray-600 text-center">نمو حقيقي وتفاعل فعال على جميع المنصات</p>
+</div>
+```
+
+#### إعداد السيرة الذاتية (20 ريال):
+```html
+<a href="/cv-form" class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">📄</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">إعداد السيرة الذاتية</h3>
+    <p class="text-gray-600 text-center">سيرة ذاتية احترافية تبرز مهاراتك وخبراتك</p>
+</a>
+```
+
+#### متابعة التوظيف (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">🎯</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">متابعة التوظيف</h3>
+    <p class="text-gray-600 text-center">مرافقتك في رحلة البحث عن الوظيفة المثالية</p>
+</div>
+```
+
+#### استشارات مهنية (20 ريال):
+```html
+<div class="service-card">
+    <div class="service-price-badge">20 ريال</div>
+    <div class="text-6xl mb-4 text-center">⭐</div>
+    <h3 class="text-2xl font-bold text-purple-800 mb-3 text-center">استشارات مهنية</h3>
+    <p class="text-gray-600 text-center">خبراء لمساعدتك في اتخاذ القرارات الصحيحة</p>
+</div>
+```
+
+## ملخص الأسعار:
+- **الضمان الاجتماعي المطور**: 59 ريال (premium)
+- **إنشاء متجر إلكتروني**: 100 ريال (premium)
+- **جميع الخدمات الأخرى**: 20 ريال لكل خدمة
+
+## خطوات التطبيق:
+1. افتح ملف digital-library-website.zip
+2. استخرج ملف index.html (الصفحة الرئيسية)
+3. أضف CSS للأسعار بعد السطر 26
+4. أضف `<div class="service-price-badge">السعر</div>` داخل كل بطاقة خدمة
+5. استخدم class="premium" للخدمات ذات الأسعار الخاصة (59 و 100)
+6. احفظ الملف
+7. ارفع الملف المعدل إلى Netlify (Deploy manually)
+
+تم التحديث بتاريخ: 2026/01/01
