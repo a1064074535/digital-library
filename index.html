@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>المكتبة الرقمية - معلومات الدفع والخدمات</title>
+      <style>
+                * {
+                              margin: 0;
+                              padding: 0;
+                              box-sizing: border-box;
+                }
+
+                body {
+                              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                              background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                              min-height: 100vh;
+                              padding: 20px;
+                }
+
+                .container {
+                              max-width: 1000px;
+                              margin: 0 auto;
+                              background: white;
+                              border-radius: 15px;
+                              box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+                              overflow: hidden;
+                }
+
+                .header {
+                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                              color: white;
+                              padding: 40px 20px;
+                              text-align: center;
+                }
+
+                .header h1 {
+                              font-size: 32px;
+                              margin-bottom: 10px;
+                }
+
+                .header p {
+                              font-size: 16px;
+                              opacity: 0.9;
+                }
+
+                .content {
+                              padding: 40px 20px;
+                }
+
+                .payment-section {
+                              margin-top: 30px;
+                              padding: 25px;
+                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                              border-radius: 15px;
+                              box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                }
+
+                .payment-section h3 {
+                              color: #fff;
+                              text-align: center;
+                              margin-bottom: 25px;
+                              font-size: 24px;
+                              font-weight: bold;
+                }
+
+                .service-price {
+                              background: rgba(255,255,255,0.95);
+                              padding: 20px;
+                              border-radius: 10px;
+                              margin-bottom: 20px;
+                              text-align: center;
+                }
+
+                .service-price h4 {
+                              color: #333;
+                              margin-bottom: 10px;
+                              font-size: 18px;
+                }
+
+                .price-amount {
+                              font-size: 36px;
+                              font-weight: bold;
+                              color: #667eea;
+                              margin: 0;
+                }
+
+                .price-note {
+                              color: #666;
+                              font-size: 14px;
+                              margin-top: 10px;
+                }
+
+                .bank-accounts {
+                              background: rgba(255,255,255,0.95);
+                              padding: 20px;
+                              border-radius: 10px;
+                }
+
+                .bank-accounts h4 {
+                              color: #333;
+                              margin-bottom: 15px;
+                              text-align: center;
+                              font-size: 18px;
+                }
+
+                .bank-account {
+                              background: #f8f9fa;
+                              padding: 15px;
+                              border-radius: 8px;
+                              margin-bottom: 15px;
+                              border-right: 4px solid #0066b2;
+                }
+
+                .bank-account.ahli {
+                              border-right-color: #00a859;
+                }
+
+                .bank-header {
+                              display: flex;
+                              align-items: center;
+                              margin-bottom: 10px;
+                }
+
+                .bank-name {
+                              font-weight: bold;
+                              font-size: 16px;
+                }
+
+                .bank-account.ahli .bank-name {
+                              color: #00a859;
+                }
+
+                .bank-account:not(.ahli) .bank-name {
+                              color: #0066b2;
+                }
+
+                .account-number {
+                              background: #fff;
+                              padding: 12px;
+                              border-radius: 5px;
+                              font-family: 'Courier New', monospace;
+                              font-size: 18px;
+                              font-weight: bold;
+                              color: #333;
+                              letter-spacing: 1px;
+                              word-break: break-all;
+                              margin-bottom: 10px;
+                }
+
+                .copy-button {
+                              padding: 8px 16px;
+                              color: white;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 14px;
+                              transition: all 0.3s;
+                }
+
+                .copy-button:hover {
+                              transform: translateY(-2px);
+                              box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+
+                .bank-account.ahli .copy-button {
+                              background: #00a859;
+                }
+
+                .bank-account:not(.ahli) .copy-button {
+                              background: #0066b2;
+                }
+
+                .warning-note {
+                              background: #fff3cd;
+                              padding: 15px;
+                              border-radius: 8px;
+                              margin-top: 15px;
+                              border-right: 4px solid #ffc107;
+                }
+
+                .warning-note p {
+                              margin: 0;
+                              color: #856404;
+                              font-size: 14px;
+                              line-height: 1.6;
+                }
+
+                .warning-note strong {
+                              display: block;
+                              margin-bottom: 10px;
+                }
+
+                .footer {
+                              background: #f8f9fa;
+                              padding: 20px;
+                              text-align: center;
+                              color: #666;
+                              border-top: 1px solid #eee;
+                }
+
+                .footer p {
+                              margin: 5px 0;
+                              font-size: 14px;
+                }
+
+                @media (max-width: 768px) {
+                              .header h1 {
+                                                font-size: 24px;
+                              }
+
+                              .price-amount {
+                                                font-size: 28px;
+                              }
+
+                              .payment-section {
+                                                padding: 15px;
+                              }
+                }
+            </style>
+  </head>
+  <body>
+        <div class="container">
+                  <div class="header">
+                                <h1>Books المكتبة الرقمية</h1>
+                              <p>منصة متكاملة للخدمات الحكومية والمهنية</p>
+                  </div>div>
+                
+                <div class="content">
+                            <div class="payment-section">
+                                            <h3>معلومات الدفع والتحويل</h3>
+                                            
+                                            <div class="service-price">
+                                                                <h4>سعر الخدمة</h4>
+                                                                <p class="price-amount"><span id="service-price">20</span>span> ريال</p>
+                                                                <p class="price-note">شامل جميع الرسوم</p>
+                                            </div>div>
+                                            
+                                            <div class="bank-accounts">
+                                                                <h4>حسابات التحويل البنكي</h4>
+                                                                
+                                                                <div class="bank-account ahli">
+                                                                                        <div class="bank-header">
+                                                                                                                    <span class="bank-name">BANK البنك الأهلي السعودي</span>span>
+                                                                                          </div>div>
+                                                                                        <div class="account-number">SA6210000024200000066707</div>div>
+                                                                                        <button class="copy-button" onclick="copyToClipboard('SA6210000024200000066707', this)">COPY نسخ رقم الحساب</button>button>
+                                                                </div>div>
+                                                                
+                                                                <div class="bank-account">
+                                                                                        <div class="bank-header">
+                                                                                                                    <span class="bank-name">BANK مصرف الراجحي</span>span>
+                                                                                          </div>div>
+                                                                                        <div class="account-number">SA554800002456086161270</div>div>
+                                                                                        <button class="copy-button" onclick="copyToClipboard('SA554800002456086161270', this)">COPY نسخ رقم الحساب</button>button>
+                                                                </div>div>
+                                                                
+                                                                <div class="warning-note">
+                                                                                        <p><strong>WARNING ملاحظة هامة:</strong></p>
+                                                                                        <p>• يرجى التحويل على أحد الحسابين أعلاه<br>
+                                                                                           • احتفظ بإثبات التحويل (لقطة شاشة)<br>
+                                                                                           • أرفق إثبات التحويل عند الحجز<br>
+                                                                                           • سيتم معالجة طلبك فور التأكد من التحويل</p>
+                                                                </div>div>
+                                            </div>div>
+                            </div>div>
+                </div>div>
+                
+                <div class="footer">
+                            <p><strong>المكتبة الرقمية</strong></p>
+                            <p>شريكك في النجاح الرقمي</p>
+                            <p>نعمل على مدار الساعة لخدمتك</p>
+                </div>div>
+        </div>div>
+      
+      <script>
+            function copyToClipboard(text, button) {
+                      const tempInput = document.createElement('input');
+                      tempInput.value = text;
+                      document.body.appendChild(tempInput);
+                      tempInput.select();
+                      document.execCommand('copy');
+                      document.body.removeChild(tempInput);
+
+                      const originalText = button.innerHTML;
+                      button.innerHTML = 'DONE تم النسخ!';
+                      button.style.opacity = '0.8';
+
+                      setTimeout(() => {
+                                    button.innerHTML = originalText;
+                                    button.style.opacity = '1';
+                      }, 2000);
+            }
+      </script>
+  </body>
+</html>html>
+      </script></p></p></strong></strong></p></p></h1>
+  </body>
+      </style></title>
+  </head>
