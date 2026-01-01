@@ -1,0 +1,156 @@
+<!-- قالب دفع الخدمات - نموذج HTML جاهز للاستخدام -->
+<!-- هذا القالب يحتوي على كود HTML كامل لإضافة معلومات الدفع لجميع صفحات الخدمات -->
+<!-- 
+  تعليمات الاستخدام:
+  1. افتح ملف HTML للخدمة (مثل: dammam.html, legal-translation.html, إلخ)
+  2. ابحث عن قسم النموذج (form)
+  3. أضف الكود أدناه قبل زر "احجز الآن" أو في نهاية النموذج
+-->
+
+<!-- بداية قسم معلومات الدفع -->
+<div class="payment-section" style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+    <h3 style="color: #fff; text-align: center; margin-bottom: 25px; font-size: 24px; font-weight: bold;">معلومات الدفع والتحويل</h3>
+    
+    <!-- سعر الخدمة -->
+    <div class="service-price" style="background: rgba(255,255,255,0.95); padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+        <h4 style="color: #333; margin-bottom: 10px; font-size: 18px;">سعر الخدمة</h4>
+        <p class="price-amount" style="font-size: 36px; font-weight: bold; color: #667eea; margin: 0;">
+            <!-- سيتم تغيير السعر حسب الخدمة -->
+            <span id="service-price">20</span> ريال
+        </p>
+        <p style="color: #666; font-size: 14px; margin-top: 10px;">شامل جميع الرسوم</p>
+    </div>
+    
+    <!-- حسابات البنوك -->
+    <div class="bank-accounts" style="background: rgba(255,255,255,0.95); padding: 20px; border-radius: 10px;">
+        <h4 style="color: #333; margin-bottom: 15px; text-align: center; font-size: 18px;">حسابات التحويل البنكي</h4>
+        
+        <!-- حساب البنك الأهلي -->
+        <div class="bank-account" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-right: 4px solid #00a859;">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <span style="font-weight: bold; color: #00a859; font-size: 16px;">🏦 البنك الأهلي السعودي</span>
+            </div>
+            <div style="background: #fff; padding: 12px; border-radius: 5px; font-family: 'Courier New', monospace;">
+                <p style="margin: 0; font-size: 18px; font-weight: bold; color: #333; letter-spacing: 1px;">SA6210000024200000066707</p>
+            </div>
+            <button onclick="copyToClipboard('SA6210000024200000066707', this)" style="margin-top: 10px; padding: 8px 16px; background: #00a859; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; transition: all 0.3s;">📋 نسخ رقم الحساب</button>
+        </div>
+        
+        <!-- حساب الراجحي -->
+        <div class="bank-account" style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-right: 4px solid #0066b2;">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <span style="font-weight: bold; color: #0066b2; font-size: 16px;">🏦 مصرف الراجحي</span>
+            </div>
+            <div style="background: #fff; padding: 12px; border-radius: 5px; font-family: 'Courier New', monospace;">
+                <p style="margin: 0; font-size: 18px; font-weight: bold; color: #333; letter-spacing: 1px;">SA554800002456086161270</p>
+            </div>
+            <button onclick="copyToClipboard('SA554800002456086161270', this)" style="margin-top: 10px; padding: 8px 16px; background: #0066b2; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; transition: all 0.3s;">📋 نسخ رقم الحساب</button>
+        </div>
+        
+        <!-- ملاحظة مهمة -->
+        <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; border-right: 4px solid #ffc107;">
+            <p style="margin: 0; color: #856404; font-size: 14px; line-height: 1.6;">
+                <strong>⚠️ ملاحظة هامة:</strong><br>
+                • يرجى التحويل على أحد الحسابين أعلاه<br>
+                • احتفظ بإثبات التحويل (لقطة شاشة)<br>
+                • أرفق إثبات التحويل عند الحجز<br>
+                • سيتم معالجة طلبك فور التأكد من التحويل
+            </p>
+        </div>
+    </div>
+</div>
+<!-- نهاية قسم معلومات الدفع -->
+
+<!-- JavaScript لوظيفة النسخ -->
+<script>
+function copyToClipboard(text, button) {
+    // إنشاء عنصر مؤقت للنسخ
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    
+    // تغيير نص الزر مؤقتاً
+    const originalText = button.innerHTML;
+    button.innerHTML = '✓ تم النسخ!';
+    button.style.background = '#28a745';
+    
+    setTimeout(() => {
+        button.innerHTML = originalText;
+        button.style.background = '';
+    }, 2000);
+}
+</script>
+
+<!-- ========================================== -->
+<!-- تعليمات خاصة بالأسعار -->
+<!-- ========================================== -->
+<!--
+  لتغيير السعر حسب الخدمة:
+  
+  1. للخدمات بسعر 20 ريال (14 خدمة):
+     - الترجمة القانونية
+     - التصديقات
+     - الاستشارات القانونية
+     - إصدار الرخص التجارية
+     - تأسيس الشركات
+     - تسجيل العلامات التجارية
+     - إعداد العقود
+     - القضايا العمالية
+     - خدمات الأحوال المدنية
+     - خدمات الجوازات
+     - خدمات التأمينات الاجتماعية
+     - الاستعلامات الحكومية
+     - حجز المواعيد الحكومية
+     - المساعدة في الإجراءات الحكومية
+     
+     اترك السعر كما هو: <span id="service-price">20</span> ريال
+  
+  2. لخدمة التسجيل في الضمان الاجتماعي المطور (دمام - مطور):
+     غيّر السطر إلى: <span id="service-price">59</span> ريال
+     
+     مثال:
+     <p class="price-amount" style="font-size: 36px; font-weight: bold; color: #667eea; margin: 0;">
+         <span id="service-price">59</span> ريال
+     </p>
+-->
+
+<!-- ========================================== -->
+<!-- قائمة ملفات الخدمات المطلوب تعديلها -->
+<!-- ========================================== -->
+<!--
+  الملفات التي يجب إضافة هذا الكود إليها:
+  
+  1. dammam.html - التسجيل في الضمان الاجتماعي المطور (السعر: 59 ريال)
+  2. legal-translation.html - الترجمة القانونية (السعر: 20 ريال)
+  3. attestation.html - التصديقات (السعر: 20 ريال)
+  4. legal-consultation.html - الاستشارات القانونية (السعر: 20 ريال)
+  5. business-license.html - إصدار الرخص التجارية (السعر: 20 ريال)
+  6. company-registration.html - تأسيس الشركات (السعر: 20 ريال)
+  7. trademark.html - تسجيل العلامات التجارية (السعر: 20 ريال)
+  8. contracts.html - إعداد العقود (السعر: 20 ريال)
+  9. labor-cases.html - القضايا العمالية (السعر: 20 ريال)
+  10. civil-affairs.html - خدمات الأحوال المدنية (السعر: 20 ريال)
+  11. passport-services.html - خدمات الجوازات (السعر: 20 ريال)
+  12. social-insurance.html - خدمات التأمينات الاجتماعية (السعر: 20 ريال)
+  13. government-inquiries.html - الاستعلامات الحكومية (السعر: 20 ريال)
+  14. appointment-booking.html - حجز المواعيد الحكومية (السعر: 20 ريال)
+  15. government-procedures.html - المساعدة في الإجراءات الحكومية (السعر: 20 ريال)
+-->
+
+<!-- ========================================== -->
+<!-- خطوات التطبيق السريع -->
+<!-- ========================================== -->
+<!--
+  الخطوات:
+  1. افتح كل ملف HTML من القائمة أعلاه
+  2. ابحث عن زر "احجز الآن" في النموذج
+  3. انسخ قسم "معلومات الدفع" (من البداية إلى النهاية) والصقه قبل الزر
+  4. غيّر السعر إلى 59 ريال فقط في ملف dammam.html
+  5. احفظ الملف
+  6. ارفع الملفات المعدلة إلى Netlify
+  
+  ملاحظة: جميع الملفات موجودة في ملف digital-library-website.zip
+-->
